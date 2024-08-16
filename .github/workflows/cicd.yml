@@ -19,11 +19,14 @@ jobs:
         run:  |
               npm install 
               npm run build
+              ls -la
+      - name: Check dist directory
+        run: ls -la dist
       - name: Deploy to Azure App Service
         uses: azure/webapps-deploy@v2
         with:
           app-name: gc-cds-api-versioning-poc
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-          package: .       
+          package: ./dist 
 
               
