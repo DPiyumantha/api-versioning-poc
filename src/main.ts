@@ -11,10 +11,10 @@ async function bootstrap() {
   });
 
   const config = new DocumentBuilder()
-    .setTitle('Cats example')
-    .setDescription('The cats API description')
+    .setTitle('GC CDS POC')
+    // .setDescription('The cats API description')
     .setVersion('1.0')
-    .addTag('cats')
+    // .addTag('cats')
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document);
