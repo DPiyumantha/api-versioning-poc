@@ -30,6 +30,7 @@ jobs:
       run: |
         cat Dockerfile
         docker build -t gccds.azurecr.io/my-nestjs-app:${{ github.sha }} .
+        docker image inspect gccds.azurecr.io/my-nestjs-app:${{ github.sha }}
         docker push gccds.azurecr.io/my-nestjs-app:${{ github.sha }}
 
     - name: 'Login via Azure CLI'
