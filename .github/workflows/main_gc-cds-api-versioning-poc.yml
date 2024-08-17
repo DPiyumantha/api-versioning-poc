@@ -58,5 +58,5 @@ jobs:
         with:
           app-name: 'gc-cds-api-versioning-poc'
           slot-name: 'Production'
-          package: .
+          package: ./dist
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1AC9852FE0324E0FA56230094E97082F }}
