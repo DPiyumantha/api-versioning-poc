@@ -28,6 +28,7 @@ jobs:
 
     - name: Build and push Docker image
       run: |
+        cat Dockerfile
         docker build -t gccds.azurecr.io/my-nestjs-app:${{ github.sha }} .
         docker push gccds.azurecr.io/my-nestjs-app:${{ github.sha }}
 
