@@ -5,7 +5,7 @@ import { UpdateReferenceDto } from './dto/update-reference.dto';
 
 @Controller({
   path: 'references',
-  version: '1'
+  version: '1/cds'
 })
 export class ReferencesController {
   constructor(private readonly referencesService: ReferencesService) {}

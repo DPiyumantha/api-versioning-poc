@@ -11,6 +11,8 @@ async function bootstrap() {
     type: VersioningType.URI
   });
 
+  app.setGlobalPrefix('api');
+
   const config = new DocumentBuilder()
     .setTitle('GC CDS POC')
     // .setDescription('The cats API description')
