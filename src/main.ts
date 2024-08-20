@@ -20,7 +20,7 @@ async function bootstrap() {
     // .addTag('cats')
     .build();
   const document = SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('api', app, document);
+  SwaggerModule.setup('swagger', app, document);
 
   await app.listen(PORT, () => {
     Logger.log(`App running on port ${PORT}`)
