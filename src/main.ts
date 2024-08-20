@@ -11,7 +11,7 @@ async function bootstrap() {
     type: VersioningType.URI
   });
 
-  app.setGlobalPrefix('api');
+  // app.setGlobalPrefix('api');
 
   const config = new DocumentBuilder()
     .setTitle('GC CDS POC')
