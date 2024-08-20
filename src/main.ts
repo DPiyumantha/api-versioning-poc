@@ -17,6 +17,8 @@ async function bootstrap() {
     .setTitle('GC CDS POC')
     // .setDescription('The cats API description')
     .setVersion('1.0')
+    .addServer('')
+    .addServer('api/cds')
     // .addTag('cats')
     .build();
   const document = SwaggerModule.createDocument(app, config);
