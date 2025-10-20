@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, Header } from '@nestjs/common';
 import { ReferencesService } from './references.service';
 import { CreateReferenceDto } from './dto/create-reference.dto';
 import { UpdateReferenceDto } from './dto/update-reference.dto';
@@ -10,14 +10,21 @@ import { UpdateReferenceDto } from './dto/update-reference.dto';
 export class ReferencesController {
   constructor(private readonly referencesService: ReferencesService) {}
 
+
+  @Post('/seed')
+  seed(@Body() createReferenceDto: CreateReferenceDto) {
+    return this.referencesService.seed();
+  }
+
   @Post()
   create(@Body() createReferenceDto: CreateReferenceDto) {
     return this.referencesService.create(createReferenceDto);
   }
+  
 
   @Get()
   findAll() {
-    return `Hello from V1`;
+    return this.referencesService.findAll()
   }
 
   @Get(':id')
